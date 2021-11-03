@@ -1,7 +1,8 @@
+baseURL: https://www.pcbaecker.com
 languageCode: en-us
 title: Philipp C. Baecker
 theme: PaperMod
-relativeURLs: true
+googleAnalytics: G-8W3M9LJNRE
 homeInfoParams:
     Title: Hi there wave
     Content: Can be Info, links, about...
