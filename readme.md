@@ -1,5 +1,12 @@
 # www.pcbaecker.com
 
+Setting up the workspace
+
+After git clone
+
+    git submodule init  
+    git submodule update
+
 Start the development server
 
-    hugo server --bind=0.0.0.0 --baseURL=192.168.178.82 --port=32577
+    hugo server
