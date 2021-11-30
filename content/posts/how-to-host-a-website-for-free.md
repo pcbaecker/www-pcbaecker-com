@@ -14,6 +14,8 @@ If you want to serve the website with a custom domain, you can just enter the na
 
 ![Settings for Github pages](/static/images/github-pages-settings.png)
 
+Edit: If you override the branch every time like in my case. The cname entry for the custom domain will disappear. To prevent that, you have to add a file called 'CNAME' in the root directory containing the domain name.
+
 In order to make requests with the custom domain to github pages you must configure the domain with CNAME entries that point to the original github pages subdomain.
 
 ![DNS settings on Cloudflare](/static/images/cloudflare-dns-for-github-pages.png)
