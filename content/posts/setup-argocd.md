@@ -8,11 +8,13 @@ ArgoCD is in my opinion one of the best GitOps-Tools available. It checks a give
 
 ## Install the helm chart
 
+Attention: The name of the helm chart must be the same as the name of the argocd application we create later! I just use "argocd" for both.
+
 The first step is to setup ArgoCD with Helm, make sure to specify the correct namespace (I use [Lens IDE](https://k8slens.dev/) to manage helm charts but that makes no difference):
 
 {{< highlight bash >}}
 helm repo add argo https://argoproj.github.io/argo-helm
-helm install --namespace argocd my-argo-cd argo/argo-cd
+helm install --namespace argocd argo argo/argo-cd
 {{< / highlight >}}
 
 After all pods are running we have to login to the UI by forwarding the argoCD service:
