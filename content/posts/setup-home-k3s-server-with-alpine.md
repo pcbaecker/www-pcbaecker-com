@@ -4,6 +4,8 @@ date: 2021-12-31T09:34:33Z
 draft: false
 ---
 
+Attention: This guide does NOT work on the raspberry pi!
+
 I bought the new Macbook Pro with M1 Pro. The power of that device deprecates my Ryzen 3700X and so I decided to use that one as a server. I measured the power consumption with GPU (RX580) attached at about 90W and without at about 50W. So I used the GPU while installation and removed it afterwards. 
 
 As OS I decided to use [Alpine Linux](https://www.alpinelinux.org/) Extended version because it is very lightweight. Flashing and booting the .iso was straight forward. After booting you have to login as root without password and use the following command to install:

@@ -8,11 +8,13 @@ ArgoCD is in my opinion one of the best GitOps-Tools available. It checks a give
 
 ## Install the helm chart
 
+Attention: The name of the helm chart must be the same as the name of the argocd application we create later! I just use "argocd" for both.
+
 The first step is to setup ArgoCD with Helm, make sure to specify the correct namespace (I use [Lens IDE](https://k8slens.dev/) to manage helm charts but that makes no difference):
 
 {{< highlight bash >}}
 helm repo add argo https://argoproj.github.io/argo-helm
-helm install --namespace argocd my-argo-cd argo/argo-cd
+helm install --namespace argocd argo argo/argo-cd
 {{< / highlight >}}
 
 After all pods are running we have to login to the UI by forwarding the argoCD service:
@@ -95,7 +97,7 @@ spec:
 
 ## Connect ArgoCD to the git repo
 
-As the next step we have to add our git repo. To do so click on 'Settings' -> 'Repositories' -> 'Connect repo using SSH'. To authenticate against the git repo we need a ssh keypair [(can be created here)](https://8gwifi.org/sshfunctions.jsp). For some reason the server verification is not working for me, so we skip that.
+As the next step we have to add our git repo. To do so click on 'Settings' -> 'Repositories' -> 'Connect repo using SSH'. To authenticate against the git repo we need a ssh keypair [(can be created here)](https://8gwifi.org/sshfunctions.jsp). Github has recently made some changes to their ssh-key requirements, therefore I recommend to use their guide for ssh-keys [Github SSH-Keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) For some reason the server verification is not working for me, so we skip that.
 
 ![Add a new git repo](/static/images/setup-argocd-add-repo.png)
 
