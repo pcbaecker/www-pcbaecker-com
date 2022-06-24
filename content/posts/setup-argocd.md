@@ -95,7 +95,7 @@ spec:
 
 ## Connect ArgoCD to the git repo
 
-As the next step we have to add our git repo. To do so click on 'Settings' -> 'Repositories' -> 'Connect repo using SSH'. To authenticate against the git repo we need a ssh keypair [(can be created here)](https://8gwifi.org/sshfunctions.jsp). For some reason the server verification is not working for me, so we skip that.
+As the next step we have to add our git repo. To do so click on 'Settings' -> 'Repositories' -> 'Connect repo using SSH'. To authenticate against the git repo we need a ssh keypair [(can be created here)](https://8gwifi.org/sshfunctions.jsp). Github has recently made some changes to their ssh-key requirements, therefore I recommend to use their guide for ssh-keys [Github SSH-Keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) For some reason the server verification is not working for me, so we skip that.
 
 ![Add a new git repo](/static/images/setup-argocd-add-repo.png)
 
