@@ -1,0 +1,24 @@
+apiVersion: getambassador.io/v3alpha1
+kind: Listener
+metadata:
+  name: http-listener
+spec:
+  hostBinding:
+    namespace:
+      from: SELF
+  port: 8080
+  protocol: HTTP
+  securityModel: INSECURE
+---
+  apiVersion: getambassador.io/v2
+kind: Host
+metadata:
+  name: argocd-rec-republic-com
+spec:
+  hostname: argocd.rec-republic.com
+  requestPolicy:
+    insecure:
+      action: Route
+---
+
+
